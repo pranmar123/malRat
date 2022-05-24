@@ -1,0 +1,23 @@
+## CONOPS
+1. Take EthicalInjector.exe and inject our fun.dll (payload) into the LoadMe executable
+2. Deliver LoadMe program to target and once they run it, we will have presistance
+in target machine
+
+
+## Steps to develop Loader.exe 
+1. Design fun.cpp with payload code then build fun.cpp to get fun.dll
+2. Load fun.dll into loader.exe using Injector.exe
+Sample execution for EthicalInjector.exe: 
+
+EthicalInjector.exe .hello "<pathTo Loader.exe>" "<pathTo fun.dll>"
+.hello is the section name to add into the header of Loader.exe
+
+
+
+## COMMON C++ Data Types used
+PVOID is a pointer to a memory address with no info about the type of that value that is pointing to. 
+DWORD data type is a 32-bit unsigned integer.
+PDWORD data type is a pointer to a DWORD.
+
+## Fun facts learned throughout
+emagic number is 5A4D which is a value located in every PE header. 
